@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './title.css';
 
-export default function Title(props) {
+export default function Title() {
   return (
     <h4 className="App-intro">
       Search Books by name
