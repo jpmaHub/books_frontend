@@ -1,19 +1,11 @@
 import React from 'react';
-
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
+import App from '../App';
+import Title from '../components/Title';
+import Header from '../components/Header';
 
-import { Button, Welcome } from '@storybook/react/demo';
+storiesOf('App', module).add('to Storybook', () => <App/>);
 
-storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
+storiesOf('Title', module).add('text', () => <Title/>);
 
-storiesOf('Button', module)
-  .add('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
-  .add('with some emoji', () => (
-    <Button onClick={action('clicked')}>
-      <span role="img" aria-label="so cool">
-        😀 😎 👍 💯
-      </span>
-    </Button>
-  ));
+storiesOf('Header', module).add('text', () => <Header/>);
